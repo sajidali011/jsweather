@@ -11,7 +11,6 @@ const weather_body = document.querySelector('.weather-body');
 async function checkWeather(city) { 
     const api_key = "f357fb936949d65b673fd9b8c61d5709";
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_key}`;
-
     try {
         const response = await fetch(url);
         const weather_data = await response.json();
@@ -32,19 +31,19 @@ async function checkWeather(city) {
 
         switch (weather_data.weather[0].main) {
             case 'Clouds':
-                weather_img.src = "C:/xampp_demo/htdocs/weather-project/cloud.png";
+                weather_img.src = "weather-project/cloud.png";
                 break;
             case 'Clear':
-                weather_img.src = "C:/xampp_demo/htdocs/weather-project/clear.png";
+                weather_img.src = "weather-project/clear.png";
                 break;
             case 'Rain':
-                weather_img.src = "C:/xampp_demo/htdocs/weather-project/rain.png";
+                weather_img.src = "weather-project/rain.png";
                 break;
             case 'Mist':
-                weather_img.src = "C:/xampp_demo/htdocs/weather-project/mist.png";
+                weather_img.src = "weather-project/mist.png";
                 break;
             case 'Snow':
-                weather_img.src = "C:/xampp_demo/htdocs/weather-project/snow.png";
+                weather_img.src = "weather-project/snow.png";
                 break;
           
         }
